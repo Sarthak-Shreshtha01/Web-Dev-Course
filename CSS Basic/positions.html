@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        /* p{
+            position: static;
+        } */
+        .box{
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .wrapper{
+            background-color: yellow;
+            width: 100vw;
+            height: 2000px;
+        }
+        #div3{
+            position: relative;
+            top: 100px;
+            left: 50px;
+        }
+        #div1{
+            position: fixed;
+        }
+        #div2{
+            position: absolute;
+            top: 50px;
+            left: 175px;
+        }
+        #div4{
+            position: sticky;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>This is heading</h2>
+    <p>This is para</p>
+    <h2>This is heading 2</h2>
+    <p>This is para2</p> -->
+
+    <div class="wrapper">
+    <div class="box" id="div1">A</div>
+    <div class="box" id="div2">B</div>
+    <div class="box" id="div3">C</div>
+    <div class="box" id="div4">D</div>
+</body>
+</html>

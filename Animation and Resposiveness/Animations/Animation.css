@@ -1,0 +1,49 @@
+.container{
+    background-color: yellow;
+    border: 2px solid red;
+    width: 100%;
+    height: 215px;
+}
+
+.box{
+    height: 212px;
+    width: 212px;
+    border: 2px solid green;
+    background-color: aqua;
+
+    animation-name: sarthak;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes sarthak {
+    /* from{
+        width: 212px;
+    }
+
+    to{
+        width: 400px;
+    } */
+
+    0%{
+        width: 212px;
+        background-color: aqua;
+    }
+    30%{
+        width: 50%;
+        background-color: aquamarine;
+    }
+
+    65%{
+        width: 75%;
+        background-color: rgb(105, 181, 156);
+    }
+
+    100%{
+        width: 100%;
+        background-color: whitesmoke;
+    }
+}

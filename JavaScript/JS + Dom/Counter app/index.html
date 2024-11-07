@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[#344151] gap-10">
+        <div class="text-[#0398d4] font-medium text-[20px]">Increment And Decrement</div>
+
+        <div class="bg-white flex text-[#344151] rounded-sm gap-12 px-5 p-3">
+            <!-- Decrement -->
+            <button onclick="decrement()" class="border-r-2 border-[#bfbfbf] pr-5">
+                <div class="font-bold text-[20px]">-</div>
+            </button>
+            
+            <div id="counter" class="font-bold text-[20px]">0</div>
+            
+            <!-- Increment -->
+            <button onclick="increment()" class="border-l-2 border-[#bfbfbf] pl-5">
+                <div class="font-bold text-[20px]">+</div>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/58a8106562.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
