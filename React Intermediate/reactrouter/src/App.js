@@ -1,15 +1,45 @@
 import './App.css';
-import { Routes, Route } from'react-router-dom';
+import { Routes, Route, NavLink } from'react-router-dom';
+import About from './Components/About';
+import Home from './Components/Home';
+import Support from './Components/Support';
+import Labs from './Components/Labs';
+import NotFound from './Components/NotFound';
+import { Link } from'react-router-dom';
+import MainHeader from './Components/MainHeader';
 
 function App() {
   return (
     <div className="App">
+
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/" >Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/support" >Support</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" >About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/labs" >Labs</NavLink>
+          </li>
+          
+        </ul>
+      </nav>
+
       <Routes>
-        <Route path='/' element = { <div>Home Page</div> } ></Route>
-        <Route path='/support' element = { <div>Support Page</div> } ></Route>
-        <Route path='/about' element = { <div>About Page</div> } ></Route>
-        <Route path='/labs' element = { <div>Labs Page</div> } ></Route>
-        <Route path='*' element = { <div>Error</div> } ></Route>
+        <Route path='/' element = { <MainHeader/> } >
+
+          {/* This will become default route */}
+          <Route index element = { <Home/> } ></Route>
+          <Route path='/support' element = { <Support/> } ></Route>
+          <Route path='/about' element = { <About/> } ></Route>
+          <Route path='/labs' element = { <Labs/> } ></Route>
+          <Route path='*' element = { <NotFound/> } ></Route>
+        </Route>
       </Routes>
     </div>
   );
